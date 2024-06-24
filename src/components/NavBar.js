@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navbar, Container} from "react-bootstrap";
+import { Navbar, Nav, Container} from "react-bootstrap";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -7,14 +7,14 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, seScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() =>{
         const onScroll = () => {
             if (window.scrollY > 50) {
-                seScrolled(true);
+                setScrolled(true);
             } else {
-                seScrolled(false);
+                setScrolled(false);
             }
         }
 
@@ -29,7 +29,7 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
             <Container>
-                <Navbar.Brand href="#home">Z-Agency</Navbar.Brand>
+                <Navbar.Brand href="/">Z-Agency</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
