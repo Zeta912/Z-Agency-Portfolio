@@ -13,11 +13,11 @@ export const Banner =() =>{
 
     useEffect(() => {
         let ticker = setInterval(() => {
-            ticker();
+            tick();
         }, delta)
 
-        return() => {clearInterval(ticker)};
-    } [text])
+        return () => {clearInterval(ticker)};
+    }, [text])
 
     const tick = () => {
         let i = loopNum % toRotate.length;
@@ -46,10 +46,10 @@ export const Banner =() =>{
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                     <span className="tagline">Welcome to our Portfolio</span>
-                    <h1>{'Somos Z Agency'}<span className="wrap">{text}/span> </h1>
+                    <h1>{'Somos Z Agency '}<span className="wrap">{text}</span> </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ipsum ante, bibendum nec mi a,
                     varius aliquet turpis. Mauris sit amet justo eget diam consequat sodales.</p>
-                    <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/></button>
+                    <button onClick={() => console.log('connect')}>Contactanos<ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                     <img src={headerImg} alt="Header Img" />
