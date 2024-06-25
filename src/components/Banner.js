@@ -9,6 +9,7 @@ export const Banner =() =>{
     const toRotate = [ "Desarrollo Web", "Diseño Web", "SEO"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
+    const [index, setIndex] = useState(1);
     const period = 2000;
 
     useEffect(() => {
@@ -36,7 +37,10 @@ export const Banner =() =>{
         } else if(isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
+            setIndex(1);
             setDelta(500);
+        } else {
+            setIndex(prevIndex => prevIndex + 1);
         }
     }
 
@@ -48,7 +52,9 @@ export const Banner =() =>{
                     <span className="tagline">Welcome to our Portfolio</span>
                     <h1>{'Somos Z Agency '}<span className="wrap">{text}</span> </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ipsum ante, bibendum nec mi a,
-                    varius aliquet turpis. Mauris sit amet justo eget diam consequat sodales.</p>
+                    varius aliquet turpis. Mauris sit amet justo eget diam consequat sodales. orem ipsum dolor sit amet, 
+                    consectetur adipiscing elit. Morbi ipsum ante, bibendum nec mi a,
+                    varius aliquet turpis. Mauris sit amet justo eget diam consequat sodales </p>
                     <button onClick={() => console.log('connect')}>Contactanos<ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

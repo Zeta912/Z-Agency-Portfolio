@@ -1,3 +1,10 @@
+import { Col, Container, Tab, Row, Nav} from "react-bootstrap";
+import { ProjectCard } from "./ProjectCard";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
+
 export const Projects = () => {
 
     const projects = [
@@ -41,7 +48,7 @@ export const Projects = () => {
                     <h2>Projects</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ipsum antembibendum nec mi a</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" defaultActiveKey="first" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                         <Nav.Item>
                             <Nav.Link eventKey="first">Tab One</Nav.Link>
                         </Nav.Item>
@@ -55,10 +62,13 @@ export const Projects = () => {
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
                                 <Row>
-                                    {
+                                {
                                         projects.map((project, index) =>{
                                             return (
-                                                <p>{project.title}</p>
+                                                <ProjectCard
+                                                key={index}
+                                                {...project}
+                                                />
                                             )
                                         })
                                     }
@@ -66,10 +76,13 @@ export const Projects = () => {
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
                                 <Row>
-                                    {
+                                {
                                         projects.map((project, index) =>{
                                             return (
-                                                <p>{project.title}</p>
+                                                <ProjectCard
+                                                key={index}
+                                                {...project}
+                                                />
                                             )
                                         })
                                     }
@@ -80,7 +93,10 @@ export const Projects = () => {
                                     {
                                         projects.map((project, index) =>{
                                             return (
-                                                <p>{project.title}</p>
+                                                <ProjectCard
+                                                key={index}
+                                                {...project}
+                                                />
                                             )
                                         })
                                     }
@@ -91,6 +107,7 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
+            <img className="background-image-right" src={colorSharp2} ></img>
         </section>
     )
 }
