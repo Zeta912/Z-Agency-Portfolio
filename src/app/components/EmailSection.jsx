@@ -14,8 +14,8 @@ export const EmailSection = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_hqzjxek', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm('service_hqzjxek', '87vXdN33_QsZ1bYv3', form.current, {
+        publicKey: '87vXdN33_QsZ1bYv3',
       })
       .then(
         () => {
