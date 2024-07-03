@@ -7,7 +7,7 @@ import Image from "next/image";
 import  { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-export const ContactUs = () => {
+export const EmailSection = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -55,12 +55,7 @@ export const ContactUs = () => {
         </div>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col" onSubmit={sendEmail}>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -114,7 +109,6 @@ export const ContactUs = () => {
               Send Message
             </button>
           </form>
-        )}
       </div>
     </section>
   );
