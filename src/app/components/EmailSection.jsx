@@ -4,39 +4,29 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+export const ContactUs = () => {
+  const form = useRef();
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+    emailjs
+      .sendForm('service_hqzjxek', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          <p className="text-green-500 text-sm mt-2">
+            Email sent successfully!
+          </p>
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
@@ -76,10 +66,10 @@ const EmailSection = () => {
                 htmlFor="email"
                 className="text-white block mb-2 text-sm font-medium"
               >
-                Your email
+                Email
               </label>
               <input
-                name="email"
+                name="user_email"
                 type="email"
                 id="email"
                 required
@@ -92,7 +82,7 @@ const EmailSection = () => {
                 htmlFor="subject"
                 className="text-white block text-sm mb-2 font-medium"
               >
-                Subject
+                Asunto
               </label>
               <input
                 name="subject"
@@ -108,13 +98,13 @@ const EmailSection = () => {
                 htmlFor="message"
                 className="text-white block text-sm mb-2 font-medium"
               >
-                Message
+                Mensaje
               </label>
               <textarea
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
+                placeholder="Contanos en que te podemos ayudar..."
               />
             </div>
             <button
@@ -128,6 +118,5 @@ const EmailSection = () => {
       </div>
     </section>
   );
-};
-
+}
 export default EmailSection;
