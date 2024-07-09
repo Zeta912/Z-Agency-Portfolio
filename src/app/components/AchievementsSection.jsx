@@ -21,8 +21,8 @@ const achievementsList = [
     value: "100,000",
   },
   {
-    metric: "Reviews",
-    value: "5/5",
+    metric: "Prom. Satisfacción",
+    value: "5",
   },
   {
     metric: "Years",
