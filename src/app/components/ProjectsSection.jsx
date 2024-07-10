@@ -27,7 +27,7 @@ const projectsData = [
     id: 3,
     title: "Sitio Web Cafeteria",
     description: "Project 3 description",
-    image: "/images/coderswe.png",
+    image: "/images/coderswe.jpeg",
     tag: ["Todos", "Web"],
     gitUrl: "/",
     previewUrl: "https://coders-coffee.netlify.app",
