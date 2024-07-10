@@ -25,12 +25,12 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "Sitio Web Cafeteria",
     description: "Project 3 description",
-    image: "/images/projects/3.png",
+    image: "/images/coderswe.png",
     tag: ["Todos", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://coders-coffee.netlify.app",
   },
   {
     id: 4,
