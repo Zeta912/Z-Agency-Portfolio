@@ -70,7 +70,7 @@ export const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="*******@email.com"
               />
             </div>
             <div className="mb-6">
@@ -107,7 +107,7 @@ export const EmailSection = () => {
               type="submit"
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
-              Send Message
+              Enviar Mensaje
             </button>
           </form>
       </div>
