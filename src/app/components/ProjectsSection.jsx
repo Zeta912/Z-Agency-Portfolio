@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Sitio Web Cafeteria",
-    description: "Proyecto 3",
+    description: "Modelo de sitio web para una cafeteria",
     image: "/images/coderswe.jpeg",
     tag: ["Todos", "Web"],
     gitUrl: "/",
@@ -34,7 +34,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Food Ordering Application",
+    title: "Sitio Web Aplicacion de Delivery",
     description: "Modelo de aplicacion delivery",
     image: "/images/projects/4.png",
     tag: ["Todos", "Mobile"],
@@ -43,7 +43,7 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Sitio Web de Viajes",
+    title: "Sitio Web Aplicacion de Viajeros",
     description: "Modelo de sitio web de aplicacion para viajeros",
     image: "/images/projects/travelweb.jpeg",
     tag: ["Todos", "Web"],
