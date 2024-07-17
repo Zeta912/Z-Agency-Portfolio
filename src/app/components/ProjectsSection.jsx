@@ -43,12 +43,12 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    title: "Sitio Web de Viajes",
+    description: "Modelo de sitio web de aplicacion para viajeros",
+    image: "/images/projects/travelweb.jpeg",
     tag: ["Todos", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://camptraveler.com",
   },
   {
     id: 6,
