@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "Potography Portfolio Website",
-    description: "Proyecto 2",
+    description: "Portafolio para Fotografia",
     image: "/images/projects/2.png",
     tag: ["Todos", "Web"],
     gitUrl: "/",
