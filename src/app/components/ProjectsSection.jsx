@@ -16,7 +16,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
+    title: "Portafolio de Fotografia",
     description: "Portafolio para Fotografia",
     image: "/images/projects/2.png",
     tag: ["Todos", "Web"],
@@ -46,7 +46,7 @@ const projectsData = [
     title: "Sitio Web Aplicacion de Viajeros",
     description: "Modelo de sitio web de aplicacion para viajeros",
     image: "/images/projects/travelweb.jpeg",
-    tag: ["Todos", "Web"],
+    tag: ["Todos", "Mobile"],
     gitUrl: "/",
     previewUrl: "https://camptraveler.com",
   },
